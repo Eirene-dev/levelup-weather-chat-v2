@@ -6,7 +6,7 @@ import { openai } from '@ai-sdk/openai';
 import { ReactNode } from 'react';
 import { generateId } from 'ai';
 
-import { weatherSchema, WeatherParams, fetchWeatherData } from './weather';
+import { weatherSchema, WeatherParams, fetchWeatherData } from '@/base/weather';
 import WeatherCard from '@/components/weather-card';
 
 export interface ServerMessage {
