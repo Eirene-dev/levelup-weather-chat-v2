@@ -10,7 +10,7 @@ import { remark } from 'remark';
 import html from 'remark-html';
 import remarkGfm from 'remark-gfm';
 
-import { weatherSchema, WeatherParams, fetchWeatherData } from './weather';
+import { weatherSchema, WeatherParams, fetchWeatherData } from '@/base/weather';
 import WeatherCard from '@/components/weather-card';
 
 export interface ServerMessage {
