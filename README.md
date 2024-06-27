@@ -34,3 +34,19 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+
+## Installation
+
+```bash
+npx create-next-app@latest levelup-weather-chat-v2
+cd levelup-weather-chat-v2/
+npm run dev
+
+npm install ai @ai-sdk/openai @ai-sdk/react zod
+touch .env.local
+
+npm install remark-gfm @next/mdx @mdx-js/loader remark remark-html
+
+npm install @tailwindcss/typography
+```
