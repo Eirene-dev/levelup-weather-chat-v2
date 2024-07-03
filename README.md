@@ -73,3 +73,6 @@ npm run dev
 각 패키지 및 기술에 대한 자세한 내용은 공식 문서를 참고하세요.
 
 
+```
+pnpm install openai
+```

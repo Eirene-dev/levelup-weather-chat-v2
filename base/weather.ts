@@ -10,7 +10,7 @@ export const weatherSchema = z.object({
 export type WeatherParams = z.infer<typeof weatherSchema>;
 
 export async function fetchWeatherData(params: WeatherParams) {
-  const apiKey = process.env.OPENWEATHERMAP_KEY; // OpenWeatherMap API key
+  const apiKey = process.env.NEXT_PUBLIC_OPENWEATHERMAP_KEY; // OpenWeatherMap API key
   const url = `https://api.openweathermap.org/data/2.5/weather?q=${params.location}&appid=${apiKey}&units=metric`;
 
   console.info('fetchWeatherData()', params.location)
