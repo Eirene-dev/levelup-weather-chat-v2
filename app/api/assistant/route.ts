@@ -1,5 +1,6 @@
 import { AssistantResponse } from 'ai';
 import OpenAI from 'openai';
+import { fetchWeatherData, WeatherParams } from '@/base/weather';
 
 const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY || '',
@@ -7,6 +8,7 @@ const openai = new OpenAI({
 
 // Allow streaming responses up to 30 seconds
 export const maxDuration = 30;
+export const dynamic = 'force-dynamic';
 
 export async function POST(req: Request) {
   // Parse the request body
@@ -45,20 +47,40 @@ export async function POST(req: Request) {
         runResult.required_action?.type === 'submit_tool_outputs'
       ) {
         const tool_outputs =
-          runResult.required_action.submit_tool_outputs.tool_calls.map(
-            (toolCall: any) => {
+          await Promise.all(runResult.required_action.submit_tool_outputs.tool_calls.map(
+            async (toolCall: any) => {
               const parameters = JSON.parse(toolCall.function.arguments);
 
               switch (toolCall.function.name) {
-                // configure your tool calls here
+                case 'get_current_weather': {
+                  const weatherParams: WeatherParams = {
+                    location: parameters.location,
+                    nation: parameters.nation,
+                    unit: parameters.unit,
+                    language: parameters.language,
+                  };
+                  console.info(weatherParams)
+                  const weatherData = await fetchWeatherData(weatherParams);
 
+                  sendDataMessage({
+                    role: 'data',
+                    // data: JSON.stringify(weatherData),
+                    data: weatherData
+                  });
+
+                  return {
+                    tool_call_id: toolCall.id,
+                    // outputs: `Get current weather set successfully`,
+                    output: JSON.stringify(weatherData),
+                  };
+                }
                 default:
                   throw new Error(
                     `Unknown tool call function: ${toolCall.function.name}`,
                   );
               }
             },
-          );
+          ));
 
         runResult = await forwardStream(
           openai.beta.threads.runs.submitToolOutputsStream(
