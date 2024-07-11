@@ -21,7 +21,6 @@ export interface ClientMessage {
   gui: ReactNode;
 }
 
-// const ASSISTANT_ID = process.env.ASSISTANT_ID;
 let THREAD_ID = '';
 let RUN_ID = '';
 

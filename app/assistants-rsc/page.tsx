@@ -5,23 +5,9 @@ import { ClientMessage, submitMessage } from './actions';
 import { useActions } from 'ai/rsc';
 import { generateId } from 'ai';
 
-import { remark } from 'remark';
-import html from 'remark-html';
-import remarkGfm from 'remark-gfm';
-
-import LoadingIndicator from '@/components/loading-indicator';
 import SubmitButton from '@/components/submit-button';
 
-import { Message } from 'ai/react';
-
-const roleToColorMap: Record<Message['role'], string> = {
-  system: 'text-red-500',
-  user: 'text-black',
-  function: 'text-gray-500',
-  tool: 'text-purple-500',
-  assistant: 'text-blue-500',
-  data: 'text-orange-500',
-};
+import roleToColorMap from '@/base/role-to-color-map'
 
 export default function Home() {
   const [input, setInput] = useState('');
@@ -91,7 +77,7 @@ export default function Home() {
               disabled={isLoading}
               placeholder="현재 제주도 날씨 어때?"
             />
-            <SubmitButton isLoading={ isLoading} isDisabled={!input.trim()} onStop={() => setIsLoading(false)} />
+            <SubmitButton isLoading={isLoading} isDisabled={!input.trim()} onStop={() => setIsLoading(false)} />
           </form>
         </div>
       </div>
