@@ -15,6 +15,7 @@ const openai = new OpenAI({
 
 export interface ClientMessage {
   id: string;
+  role: 'user' | 'assistant';
   status: ReactNode;
   text: ReactNode;
   gui: ReactNode;
@@ -102,20 +103,21 @@ export async function submitMessage(question: string): Promise<ClientMessage> {
                     console.info(weatherParams)
                     const weatherData = await fetchWeatherData(weatherParams);
 
-                    gui.append(
-                      <div className="flex flex-row items-center gap-2">
-                        <div>
-                          Searching for weather: {weatherData?.location} in {weatherData?.nation}
+                    if (weatherData && weatherData.location && weatherData.nation) {
+                      gui.append(
+                        <div className="flex flex-row items-center gap-2">
+                          <div>
+                            Searching for weather: {weatherData.location} in {weatherData.nation}
+                          </div>
+                        </div>,
+                      );
+
+                      gui.append(
+                        <div className="flex flex-col gap-2">
+                          <WeatherCard data={JSON.stringify(weatherData)} />
                         </div>
-                      </div>,
-                    );
-
-                    gui.append(
-                      <div className="flex flex-col gap-2">
-                        <WeatherCard data={JSON.stringify(weatherData)} />
-                      </div>
-                    );
-
+                      );
+                    }
 
                     tool_outputs.push({
                       tool_call_id: toolCallId,
@@ -123,45 +125,6 @@ export async function submitMessage(question: string): Promise<ClientMessage> {
                     });
                   }
                 }
-
-                //   if (name === 'search_emails') {
-                //     const { query, has_attachments } = JSON.parse(args);
-
-                //     gui.append(
-                //       <div className="flex flex-row items-center gap-2">
-                //         <div>
-                //           Searching for emails: {query}, has_attachments:
-                //           {has_attachments ? 'true' : 'false'}
-                //         </div>
-                //       </div>,
-                //     );
-
-                //     await new Promise(resolve => setTimeout(resolve, 2000));
-
-                //     const fakeEmails = searchEmails({ query, has_attachments });
-
-                //     gui.append(
-                //       <div className="flex flex-col gap-2">
-                //         {fakeEmails.map(email => (
-                //           <div
-                //             key={email.id}
-                //             className="flex flex-row items-center justify-between gap-2 p-2 rounded-md bg-zinc-100"
-                //           >
-                //             <div className="flex flex-row items-center gap-2">
-                //               <div>{email.subject}</div>
-                //             </div>
-                //             <div className="text-zinc-500">{email.date}</div>
-                //           </div>
-                //         ))}
-                //       </div>,
-                //     );
-
-                //     tool_outputs.push({
-                //       tool_call_id: toolCallId,
-                //       output: JSON.stringify(fakeEmails),
-                //     });
-                //   }
-                // }
 
                 if (data.status === 'requires_action') {
                   const nextRun: any =
@@ -195,6 +158,7 @@ export async function submitMessage(question: string): Promise<ClientMessage> {
     status: status.value,
     text: textUIStream.value,
     gui: gui.value,
+    role: 'assistant',
   };
 }
 
