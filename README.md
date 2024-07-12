@@ -1,6 +1,12 @@
-# Levelup Weather Chat v2
+# 레벨업 날씨 AI 챗봇 v2
 
 이 프로젝트는 OpenAI와 OpenWeatherMap API를 사용하여 실시간 날씨 정보를 제공하는 채팅 애플리케이션입니다.
+
+본 프로젝트는 도서 [『레벨업 리액트 프로그래밍 with Next.js (웹앱의 작동 원리부터 SSR 방식을 적용한 현대적 접근까지)』](https://reactnext-central.xyz/levelup/book)의 '12장. AI 챗봇을 통합하는 웹 애플리케이션'의 [실습 프로젝트](https://github.com/bjpublic/react_programming_with_Next.js/tree/main/chapter12)의 업데이트 버전입니다. 최신 버셀 AI SDK를 사용하고 OpenAI의 Chat Completion과 Assistants를 이용하여 다음의 네 가지 방식으로 구현된 예제를 설명합니다.
+1. 클라언트 렌더링: useChat 훅과 라우트 핸들러에서 streamText 사용
+2. 서버 렌더링: useActions 훅과 서버 액션에서 generateText 사용
+3. 클라이언트 렌더링(Assistants): useAssistant 훅과 라우트 핸들러에서 AssistantResponse 사용
+4. 서버 렌더링(Assistants): useActions 훅과 서버 액션에서 createStreamableUI 사용
 
 ## 설치
 
