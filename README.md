@@ -56,24 +56,34 @@ npm install remark-gfm @next/mdx @mdx-js/loader remark remark-html
 
 
 ## 환경 변수 설정
+본 프로젝트를 실행하기 위해서는 Next.js [환경 변수 설정](https://reactnext-central.xyz/docs/nextjs/configuring/environment-variables)이 필요합니다. 다음 단계를 따라 설정을 완료하세요.
 
-환경 변수 파일을 설정합니다. `.env.example` 파일을 `.env.local`로 이동시켜 로컬 환경 변수를 설정할 수 있습니다.
+1. 프로젝트 루트 디렉터리에 `.env.local` 파일을 생성하거나,
+`.env.example` 파일을 `.env.local`로 변경하여 로컬 환경 변수를 설정합니다.
 
 ```bash
 mv .env.example .env.local
 ```
 
-프로젝트 루트 디렉터리에 `.env.local` 파일을 생성하고 다음과 같이 설정합니다.
+2. `.env.local` 파일을 다음과 같이 설정합니다.
 
 ```env
-# OpenAI API 키를 여기에 추가하세요. OpenAI의 API 키는 OpenAI의 서비스를 사용하기 위해 필요합니다.
-# OpenAI의 계정에서 API 키를 생성한 후 아래에 붙여넣으세요.
-OPENAI_API_KEY="sk-xxx"
+# OpenAI API 키
+OPENAI_API_KEY="your-openai-api-key-here"
 
-# OpenWeatherMap API 키를 여기에 추가하세요. OpenWeatherMap의 API 키는 날씨 데이터를 가져오기 위해 필요합니다.
-# OpenWeatherMap의 계정에서 API 키를 생성한 후 아래에 붙여넣으세요.
-OPENWEATHERMAP_KEY="xxx"
+# Assistant ID
+ASSISTANT_ID="your-assistant-id-here"
+
+# OpenWeatherMap API 키
+OPENWEATHERMAP_KEY="your-openweathermap-api-key-here"
+NEXT_PUBLIC_OPENWEATHERMAP_KEY="your-next-public-openweathermap-api-key-here"
 ```
+
+  - `OPENAI_API_KEY`: OpenAI API 키를 입력합니다. OpenAI 계정에서 API 키를 생성할 수 있습니다.
+  - `ASSISTANT_ID`: 사용하고자 하는 Assistant의 ID를 입력합니다.
+  - `OPENWEATHERMAP_KEY`와 `NEXT_PUBLIC_OPENWEATHERMAP_KEY`: OpenWeatherMap API 키를 입력합니다. OpenWeatherMap 계정에서 API 키를 생성할 수 있습니다.
+
+이제 프로젝트의 환경 변수가 설정되었으며, 프로젝트를 실행할 준비가 되었습니다. 필요한 경우 환경 변수를 수정하여 다른 API 키나 설정을 적용할 수 있습니다.
 
 ## 사용 방법
 
