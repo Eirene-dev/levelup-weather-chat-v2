@@ -95,6 +95,17 @@ pnpm dev
 
 이 명령어는 로컬 개발 서버를 시작합니다. 브라우저에서 `http://localhost:3000`으로 이동하여 애플리케이션을 확인할 수 있습니다.
 
+각 라우트에서 실행 결과를 확인하세요.
+- http://localhost:3000: 기본 채팅 UI (실제 채팅 서비스는 동작하지 않음)
+- http://localhost:3000/usechat: useChat 훅과 라우트 핸들러에서 streamText 사용
+
+- http://localhost:3000/chat: useActions 훅과 서버 액션에서 generateText 사용 (마크다운 미적용)
+- http://localhost:3000/chat-markdown: useActions 훅과 서버 액션에서 generateText 사용 (마크다운 적용)
+- http://localhost:3000/assistants: useAssistant 훅과 라우트 핸들러에서 AssistantResponse 사용
+- http://localhost:3000/assistants-rsc: useActions 훅과 서버 액션에서 createStreamableUI 사용
+
+이제 프로젝트를 성공적으로 실행하고 각 라우트에서 제공하는 기능을 확인할 수 있습니다.
+
 ## 주요 기능
 
 - OpenAI와 OpenWeatherMap API를 사용하여 실시간 날씨 정보를 제공합니다.
