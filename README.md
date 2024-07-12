@@ -62,7 +62,7 @@ npm install remark-gfm @next/mdx @mdx-js/loader remark remark-html
 
 
 ## 환경 변수 설정
-본 프로젝트를 실행하기 위해서는 Next.js [환경 변수 설정](https://reactnext-central.xyz/docs/nextjs/configuring/environment-variables)이 필요합니다. 다음 단계를 따라 설정을 완료하세요.
+본 프로젝트를 실행하기 위해서는 [Next.js 환경 변수 설정](https://reactnext-central.xyz/docs/nextjs/configuring/environment-variables)이 필요합니다. 다음 단계를 따라 설정을 완료하세요.
 
 1. 프로젝트 루트 디렉터리에 `.env.local` 파일을 생성하거나,
 `.env.example` 파일을 `.env.local`로 변경하여 로컬 환경 변수를 설정합니다.
@@ -103,12 +103,12 @@ pnpm dev
 
 각 라우트에서 실행 결과를 확인하세요.
 - http://localhost:3000: 기본 채팅 UI (실제 채팅 서비스는 동작하지 않음)
-- http://localhost:3000/usechat: useChat 훅과 라우트 핸들러에서 streamText 사용
+- http://localhost:3000/usechat: `useChat` 훅과 라우트 핸들러에서 `streamText` 사용
 
-- http://localhost:3000/chat: useActions 훅과 서버 액션에서 generateText 사용 (마크다운 미적용)
-- http://localhost:3000/chat-markdown: useActions 훅과 서버 액션에서 generateText 사용 (마크다운 적용)
-- http://localhost:3000/assistants: useAssistant 훅과 라우트 핸들러에서 AssistantResponse 사용
-- http://localhost:3000/assistants-rsc: useActions 훅과 서버 액션에서 createStreamableUI 사용
+- http://localhost:3000/chat: `useActions` 훅과 서버 액션에서 `generateText` 사용 (마크다운 미적용)
+- http://localhost:3000/chat-markdown: `useActions` 훅과 서버 액션에서 `generateText` 사용 (마크다운 적용)
+- http://localhost:3000/assistants: `useAssistant` 훅과 라우트 핸들러에서 `AssistantResponse` 사용
+- http://localhost:3000/assistants-rsc: `useActions` 훅과 서버 액션에서 `createStreamableUI` 사용
 
 이제 프로젝트를 성공적으로 실행하고 각 라우트에서 제공하는 기능을 확인할 수 있습니다.
 
@@ -118,7 +118,7 @@ pnpm dev
 
 - OpenAI와 OpenWeatherMap API를 사용하여 실시간 날씨 정보를 제공합니다.
 - 사용자는 특정 도시의 날씨 정보를 채팅을 통해 요청할 수 있습니다.
-- MDX 및 remark를 사용하여 Markdown 콘텐츠를 쉽게 렌더링합니다.
+- `MDX` 및 `remark`를 사용하여 Markdown 콘텐츠를 쉽게 렌더링합니다.
 
 ### 주요 사용 기술
 
