@@ -8,35 +8,60 @@
 3. 클라이언트 렌더링(Assistants): useAssistant 훅과 라우트 핸들러에서 AssistantResponse 사용
 4. 서버 렌더링(Assistants): useActions 훅과 서버 액션에서 createStreamableUI 사용
 
-## 설치
+
+## 다운로드 및 설치
+
+이 프로젝트를 다운로드하고 실행하려면 다음 단계를 따르십시오.
+
+1. 먼저 프로젝트를 다운로드합니다.
+```bash
+git https://github.com/Eirene-dev/levelup-weather-chat-v2.git
+```
+
+2. 프로젝트 폴더로 이동합니다.
+```bash
+cd levelup-weather-chat-v2
+```
+
+3. 의존성 있는 패키지들을 설치합니다.
+```bash
+pnpm install
+```
+
+이제 프로젝트의 모든 의존성 패키지가 설치되었으며 프로젝트를 실행할 준비가 되었습니다.
+
+### 프로젝트를 새로 생성하여 본 프로젝트를 참조하여 구현하는 경우
+<details>
+    <summary>프로젝트를 새로 생성하는 방법</summary>
 
 다음 명령어를 사용하여 Next.js 애플리케이션을 생성하고 프로젝트 디렉터리로 이동합니다.
 
 ```bash
 npx create-next-app@latest levelup-weather-chat-v2
 cd levelup-weather-chat-v2/
-npm run dev
 ```
 
-이제 필요한 패키지를 설치합니다. 첫 번째 명령어는 OpenAI SDK, React, Zod를 설치합니다.
+이제 필요한 패키지를 설치합니다. 먼저 OpenAI SDK, React, Zod를 설치합니다.
 
 ```bash
 npm install ai @ai-sdk/openai @ai-sdk/react zod
 ```
+
+다음으로 Markdown과 MDX 처리를 위해 필요한 패키지를 설치합니다. 이 패키지는 GitHub Flavored Markdown(GFM) 및 MDX 처리를 위한 remark와 rehype 플러그인을 포함합니다.
+
+```bash
+npm install remark-gfm @next/mdx @mdx-js/loader remark remark-html
+```
+</details>
+
+
+## 환경 변수 설정
 
 환경 변수 파일을 설정합니다. `.env.example` 파일을 `.env.local`로 이동시켜 로컬 환경 변수를 설정할 수 있습니다.
 
 ```bash
 mv .env.example .env.local
 ```
-
-다음으로, Markdown과 MDX 처리를 위해 필요한 패키지를 설치합니다. 이 패키지는 GitHub Flavored Markdown(GFM) 및 MDX 처리를 위한 remark와 rehype 플러그인을 포함합니다.
-
-```bash
-npm install remark-gfm @next/mdx @mdx-js/loader remark remark-html
-```
-
-## 환경 변수 설정
 
 프로젝트 루트 디렉터리에 `.env.local` 파일을 생성하고 다음과 같이 설정합니다.
 
