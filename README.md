@@ -8,6 +8,7 @@
 3. 클라이언트 렌더링(Assistants): useAssistant 훅과 라우트 핸들러에서 AssistantResponse 사용
 4. 서버 렌더링(Assistants): useActions 훅과 서버 액션에서 createStreamableUI 사용
 
+![레벨업 날씨 AI 챗봇 v2의 초기 실행 화면](https://github.com/Eirene-dev/levelup-weather-chat-v2/assets/images/levelup-weather-ai-app-v2_1.png)
 
 ## 다운로드 및 설치
 
@@ -106,13 +107,15 @@ pnpm dev
 
 이제 프로젝트를 성공적으로 실행하고 각 라우트에서 제공하는 기능을 확인할 수 있습니다.
 
+
+
 ## 주요 기능
 
 - OpenAI와 OpenWeatherMap API를 사용하여 실시간 날씨 정보를 제공합니다.
 - 사용자는 특정 도시의 날씨 정보를 채팅을 통해 요청할 수 있습니다.
 - MDX 및 remark를 사용하여 Markdown 콘텐츠를 쉽게 렌더링합니다.
 
-### 커스터마이징
+### 주요 사용 기술
 
 이 프로젝트는 다음과 같은 주요 기술을 사용합니다.
 
