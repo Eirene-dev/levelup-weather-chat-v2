@@ -9,10 +9,10 @@
 4. 서버 렌더링(Assistants): useActions 훅과 서버 액션에서 createStreamableUI 사용
 
 <p align="center">
-  <img src="./assets/images/levelup-weather-ai-app-v2_2.png" alt="레벨업 날씨 AI 챗봇 v2의 제주도 날씨 문의 시작" width="19%">
-  <img src="./assets/images/levelup-weather-ai-app-v2_3.png" alt="레벨업 날씨 AI 챗봇 v2의 제주도 날씨 문의 완료" width="19%">
-  <img src="./assets/images/levelup-weather-ai-app-v2_4.png" alt="레벨업 날씨 AI 챗봇 v2의 부산 날씨 문의" width="19%">
-  <img src="./assets/images/levelup-weather-ai-app-v2_5.png" alt="레벨업 날씨 AI 챗봇 v2의 부산과 제주도 여행" width="19%">
+  <img src="./assets/images/levelup-weather-ai-app-v2_2.png" alt="레벨업 날씨 AI 챗봇 v2의 제주도 날씨 문의 시작" width="24%">
+  <img src="./assets/images/levelup-weather-ai-app-v2_3.png" alt="레벨업 날씨 AI 챗봇 v2의 제주도 날씨 문의 완료" width="24%">
+  <img src="./assets/images/levelup-weather-ai-app-v2_4.png" alt="레벨업 날씨 AI 챗봇 v2의 부산 날씨 문의" width="24%">
+  <img src="./assets/images/levelup-weather-ai-app-v2_5.png" alt="레벨업 날씨 AI 챗봇 v2의 부산과 제주도 여행" width="24%">
 </p>
 ## 다운로드 및 설치
 
