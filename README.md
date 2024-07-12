@@ -79,9 +79,9 @@ OPENWEATHERMAP_KEY="your-openweathermap-api-key-here"
 NEXT_PUBLIC_OPENWEATHERMAP_KEY="your-next-public-openweathermap-api-key-here"
 ```
 
-  - `OPENAI_API_KEY`: OpenAI API 키를 입력합니다. OpenAI 계정에서 API 키를 생성할 수 있습니다.
-  - `ASSISTANT_ID`: 사용하고자 하는 Assistant의 ID를 입력합니다.
-  - `OPENWEATHERMAP_KEY`와 `NEXT_PUBLIC_OPENWEATHERMAP_KEY`: OpenWeatherMap API 키를 입력합니다. OpenWeatherMap 계정에서 API 키를 생성할 수 있습니다.
+  - `OPENAI_API_KEY`: [OpenAI API 키](https://platform.openai.com/api-keys)를 입력합니다. OpenAI 계정에서 API 키를 생성할 수 있습니다.
+  - `ASSISTANT_ID`: 사용하고자 하는 [OpenAI Assistant의 ID](https://platform.openai.com/assistants)를 입력합니다.
+  - `OPENWEATHERMAP_KEY`와 `NEXT_PUBLIC_OPENWEATHERMAP_KEY`: OpenWeatherMap API 키를 입력합니다. [OpenWeatherMap](https://openweathermap.org/) 계정에서 API 키를 생성할 수 있습니다.
 
 이제 프로젝트의 환경 변수가 설정되었으며, 프로젝트를 실행할 준비가 되었습니다. 필요한 경우 환경 변수를 수정하여 다른 API 키나 설정을 적용할 수 있습니다.
 
