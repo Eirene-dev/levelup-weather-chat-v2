@@ -8,7 +8,7 @@
 3. 클라이언트 렌더링(Assistants): useAssistant 훅과 라우트 핸들러에서 AssistantResponse 사용
 4. 서버 렌더링(Assistants): useActions 훅과 서버 액션에서 createStreamableUI 사용
 
-## 프로젝트 실행
+## 소개 및 실행 화면
 Next.js와 버셀 AI SDK를 활용하여 구축된 날씨 AI 챗봇입니다. OpenAI와 OpenWeatherMap API를 통해 실시간 날씨 정보를 제공합니다. OpenAI ChatGPT의 함수 호출 기능을 활용하여 대화 중 날씨 문의가 있을 때 실시간 날씨 정보를 가져와 리액트 컴포넌트를 통해 사용자 친화적인 UI를 제공합니다. 또한, ChatGPT 언어 모델의 기존 정보에 실시간 날씨 정보를 더하여 더욱 풍부한 대화를 할 수 있게 합니다.
 
 <p align="center">
