@@ -14,6 +14,7 @@
   <img src="./assets/images/levelup-weather-ai-app-v2_4.png" alt="레벨업 날씨 AI 챗봇 v2의 부산 날씨 문의" width="24%">
   <img src="./assets/images/levelup-weather-ai-app-v2_5.png" alt="레벨업 날씨 AI 챗봇 v2의 부산과 제주도 여행" width="24%">
 </p>
+
 ## 다운로드 및 설치
 
 이 프로젝트를 다운로드하고 실행하려면 다음 단계를 따르십시오.
