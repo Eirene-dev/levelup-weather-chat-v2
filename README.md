@@ -50,7 +50,7 @@ npx create-next-app@latest levelup-weather-chat-v2
 cd levelup-weather-chat-v2/
 ```
 
-이제 필요한 패키지를 설치합니다. 먼저 OpenAI SDK, React, Zod를 설치합니다.
+이제 필요한 패키지를 설치합니다. 먼저 버셀 AI SDK 라이브러리들과 Zod를 설치합니다.
 
 ```bash
 npm install ai @ai-sdk/openai @ai-sdk/react zod
